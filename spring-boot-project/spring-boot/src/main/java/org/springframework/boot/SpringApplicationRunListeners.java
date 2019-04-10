@@ -29,12 +29,17 @@ import org.springframework.util.ReflectionUtils;
 /**
  * A collection of {@link SpringApplicationRunListener}.
  *
+ * SpringApplicationRunListener 的集合。
+ *
  * @author Phillip Webb
  */
 class SpringApplicationRunListeners {
 
 	private final Log log;
 
+	/**
+	 * SpringApplicationRunListener 数组
+	 */
 	private final List<SpringApplicationRunListener> listeners;
 
 	SpringApplicationRunListeners(Log log,
@@ -55,6 +60,10 @@ class SpringApplicationRunListeners {
 		}
 	}
 
+	/**
+	 * 通知 SpringApplicationRunListener 的数组，Spring 容器准备完成。
+	 * @param context
+	 */
 	public void contextPrepared(ConfigurableApplicationContext context) {
 		for (SpringApplicationRunListener listener : this.listeners) {
 			listener.contextPrepared(context);

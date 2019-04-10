@@ -71,6 +71,8 @@ class BeanDefinitionLoader {
 	/**
 	 * Create a new {@link BeanDefinitionLoader} that will load beans into the specified
 	 * {@link BeanDefinitionRegistry}.
+	 * 创建一个新的 BeanDefinitionLoader ，它将 bean 加载到指定的 BeanDefinitionRegistry 中。
+	 *
 	 * @param registry the bean definition registry that will contain the loaded beans
 	 * @param sources the bean sources
 	 */
